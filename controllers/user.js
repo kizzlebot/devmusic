@@ -119,7 +119,15 @@ exports.postSignup = function(req, res, next) {
  */
 exports.getAccount = function(req, res) {
   res.render('account/profile', {
-    title: 'Account Management'
+    title: 'Account Management',
+    linkable_accts:['Instagram', 'Google', 'Facebook', 'Twitter', 'Github', 'LinkedIn'],
+    groups:{
+      Email:{},
+      Name:{},
+      Gender:[],
+      Location:{},
+      Gravatar: {}
+    }
   });
 };
 

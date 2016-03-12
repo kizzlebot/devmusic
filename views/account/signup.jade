@@ -1,24 +1,43 @@
 extends ../layout
 
-block content
-  .page-header
-    h3 Sign up
-  form.form-horizontal(id='signup-form', method='POST')
-    input(type='hidden', name='_csrf', value=_csrf)
-    .form-group
-      label.col-sm-3.control-label(for='email') Email
-      .col-sm-7
-        input.form-control(type='email', name='email', id='email', placeholder='Email', autofocus)
-    .form-group
-      label.col-sm-3.control-label(for='password') Password
-      .col-sm-7
-        input.form-control(type='password', name='password', id='password', placeholder='Password')
-    .form-group
-      label.col-sm-3.control-label(for='confirmPassword') Confirm Password
-      .col-sm-7
-        input.form-control(type='password', name='confirmPassword', id='confirmPassword', placeholder='Confirm Password')
-    .form-group
-      .col-sm-offset-3.col-sm-7
-        button.btn.btn-success(type='submit')
-          i.fa.fa-user-plus
-          | Signup
+
+
+
+
+block topLeftPane
+  div( id="existingUser" class="sideButton">Already have an acount?</div)
+
+//- {% block middleLeftPane %}
+block middleLeftPane
+  a(href="/account/facebook/login/")
+     div( class="sideButton fb")
+        div( class="icon-facebook")
+        div( id="facebookText") Create an account through facebook
+block mainPaine
+  div( class="window")
+    div( class="windowHeader" )
+      div( id="loginHeader">Create an account at gameServe</div)
+    div( class="accountSection expand" )
+      form(id="newMember", method="post", action=".")
+              //- {% csrf_token %}
+
+              //- {% for hidden in form.hidden_fields %}
+              //-     {{ hidden }}
+              //- {% endfor %}
+
+              //- {% for field in form.visible_fields %}
+              //-     div( class="loginBlock")
+              //-         h5 {{ field.label_tag }}
+              //-         {{ field }}
+              //-         {{field.errors}}
+
+
+             //- <!--  <button id='submitbtn'style=" display:none" type="submit"></button> -->
+                 div( type="submit" form="newMember" id="signUp" class="wideButton">Create Account</div)
+          //- </form>
+      //- </div>
+
+block lastScript
+  script(type="text/javascript", src='js/login.js')
+
+

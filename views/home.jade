@@ -1,27 +1,42 @@
 extends layout
 
-block content
-  h1 Hackathon Starter
-  p.lead A boilerplate for Node.js web applications.
-  hr
-  .row
-    .col-sm-6
-      h2 Heading
-      p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-      p
-        a.btn.btn-default(href='#', role='button') View details »
-    .col-sm-6
-      h2 Heading
-      p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-      p
-        a.btn.btn-default(href='#', role='button') View details »
-    .col-sm-6
-      h2 Heading
-      p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-      p
-        a.btn.btn-default(href='#', role='button') View details »
-    .col-sm-6
-      h2 Heading
-      p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-      p
-        a.btn.btn-default(href='#', role='button') View details »
+block preReqs
+  script(src="/js/index.js")
+
+block topLeftPane
+  section.window.side
+    .windowHeader Recent Activity
+    - var activity = []
+    each act in activity
+      a(href='/events/game/#{activity.event.id}')
+        .listItem
+          img.userPhoto(src="/assets/gsGeneralPerson.jpg")
+          .recentInfo
+            .recentAction #{activity.activity}
+            .recentGameType #{activity.event.court.sport}
+            .recentTime #{activity.time} ago
+
+
+block bottomLeftPane
+  aside#mapCanvas.window.side
+
+block mainPane
+  section.window
+    .windowHeader Upcoming Events
+    // Fill in with filtered games from the database
+    - var events = [];
+    each event in events
+      a(href='/events/game/#{event.id}/')
+        .listItem.infinite-item
+          .listImg
+            // Sets proper class for event type
+            div(class='icon-#{event.court.sport.toLowerCase()}')
+          .browseGameInfo
+            .infoBlock
+              .infoText #{event.datetime.date}
+              .infoText #{event.datetime.time} (#{event.datetime})
+            .infoBlock
+              .infoText
+              // Counts number of participants
+              .infoText #{event.participants.count} people committed
+            .heatImg: .icon-heatRep

@@ -26,6 +26,13 @@ var userSchema = new mongoose.Schema({
   }
 }, { timestamps: true });
 
+
+
+
+
+
+
+
 /**
  * Password hash middleware.
  */
@@ -47,6 +54,11 @@ userSchema.pre('save', function(next) {
     });
   });
 });
+
+
+
+
+
 
 /**
  * Helper method for validating user's password.
