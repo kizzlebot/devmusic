@@ -57,7 +57,7 @@ mongoose.connection.on('error', function() {
 
 
 
-if (app.get('env') == 'development'){
+// if (app.get('env') == 'development'){
   var config = require('./webpack.config.dev');
   var webpack = require('webpack');
 
@@ -69,7 +69,7 @@ if (app.get('env') == 'development'){
   }));
   app.use(require('webpack-hot-middleware')(compiler));
 
-}
+// }
 
 
 
