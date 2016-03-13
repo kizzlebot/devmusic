@@ -1,5 +1,5 @@
 {
-  "name": "hackathon-starter",
+  "name": "devmusic",
   "version": "3.5.0",
   "repository": {
     "type": "git",
@@ -53,6 +53,8 @@
     "passport-openid": "^0.4.0",
     "passport-twitter": "^1.0.4",
     "paypal-rest-sdk": "^1.6.8",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7",
     "request": "^2.69.0",
     "stripe": "^4.4.0",
     "tumblr.js": "^0.0.7",
@@ -64,7 +66,23 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^2.4.5",
-    "supertest": "^1.2.0"
+    "supertest": "^1.2.0",
+    "babel-core": "^6.6.5",
+    "babel-eslint": "^5.0.0-beta4",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-react-hmre": "^1.1.1",
+    "cross-env": "^1.0.7",
+    "eslint": "^1.10.3",
+    "eslint-plugin-babel": "^3.0.0",
+    "eslint-plugin-react": "^3.11.3",
+    "eventsource-polyfill": "^0.9.6",
+    "express": "^4.13.3",
+    "rimraf": "^2.4.3",
+    "webpack": "^1.12.9",
+    "webpack-dev-middleware": "^1.4.0",
+    "webpack-hot-middleware": "^2.9.1"
   },
   "license": "MIT"
 }

@@ -55,6 +55,27 @@ mongoose.connection.on('error', function() {
   process.exit(1);
 });
 
+
+
+if (app.get('env') == 'development'){
+  var config = require('./webpack.config.dev');
+  var webpack = require('webpack');
+
+  var compiler = webpack(config);
+
+  app.use(require('webpack-dev-middleware')(compiler, {
+    noInfo: true,
+    publicPath: config.output.publicPath
+  }));
+  app.use(require('webpack-hot-middleware')(compiler));
+
+}
+
+
+
+
+
+
 /**
  * Express configuration.
  */
@@ -105,6 +126,9 @@ app.use(function(req, res, next) {
   next();
 });
 app.use(express.static(path.join(__dirname, 'public'), { maxAge: 31557600000 }));
+
+
+
 
 /**
  * Primary app routes.
