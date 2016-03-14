@@ -1,6 +1,7 @@
 /**
  * Module dependencies.
  */
+var pkg = require('./package.json');
 var express = require('express');
 var cookieParser = require('cookie-parser');
 var compress = require('compression');
@@ -57,7 +58,13 @@ mongoose.connection.on('error', function() {
 
 
 
-// if (app.get('env') == 'development'){
+
+
+
+/**
+ * If Development environment then use webpack middleware
+ */
+if (app.get('env') == 'development'){
   var config = require('./webpack.config.dev');
   var webpack = require('webpack');
 
@@ -69,7 +76,7 @@ mongoose.connection.on('error', function() {
   }));
   app.use(require('webpack-hot-middleware')(compiler));
 
-// }
+}
 
 
 
@@ -117,6 +124,7 @@ app.use(lusca.xframe('SAMEORIGIN'));
 app.use(lusca.xssProtection(true));
 app.use(function(req, res, next) {
   res.locals.user = req.user;
+  res.locals.appName = pkg.name;
   next();
 });
 app.use(function(req, res, next) {

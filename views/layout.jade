@@ -5,17 +5,15 @@ html
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     meta(name='csrf-token', content=_csrf)
-    title #{title} - Hackathon Starter
+    title #{appName} - #{title}
     link(rel='shortcut icon', href='/favicon.png')
-    link(rel='stylesheet', href='/css/main.css')
+    //- link(rel='stylesheet', href='/css/main.css')
   body
-    include partials/header
+    //- include partials/header
 
-    .container
-      include partials/flash
-      div(id='root')
+    div(id='root')
 
-    include partials/footer
+    //- include partials/footer
 
     script(src='/dist/bundle.js')
     script(src='/js/lib/bootstrap.min.js')
