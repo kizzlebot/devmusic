@@ -8,6 +8,8 @@ html
     title #{appName} - #{title}
     link(rel='shortcut icon', href='/favicon.png')
     //- link(rel='stylesheet', href='/css/main.css')
+    style.
+        body{padding-top:0px}
   body
     //- include partials/header
 
@@ -16,4 +18,3 @@ html
     //- include partials/footer
 
     script(src='/dist/bundle.js')
-    script(src='/js/lib/bootstrap.min.js')

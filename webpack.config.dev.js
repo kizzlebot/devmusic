@@ -34,9 +34,12 @@ module.exports = {
       { test: /\.jade?$/,        exclude: /node_modules/,       loader: 'jade'},
       { test: /\.woff2?/,                                       loader: 'url?limit=10000&mimetype=application/font-woff' },
       { test: /\.(ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,           loader: 'file-loader' },
-      { test: /\.less$/,                                        loader: ExtractTextPlugin.extract('css?sourceMap!' + 'less?sourceMap') },
+      { test: /\.less$/,                                        loader: "style!css!less"},
       { test: /\.scss$/,                                        loaders: ['style', 'css', 'sass'] },
-      { test: /\.css$/,                                         loader: ExtractTextPlugin.extract('style', 'css?modules&localIdentName=[name]---[local]---[hash:base64:5]!postcss')}]
+      { test: /\.css$/,                                         loaders: ['style','css']},
+      { test: /\.png$/, loader: "url-loader?limit=100000" },
+      { test: /\.jpg$/, loader: "file-loader" }
+    ]
   },
   resolve:{ modulesDirectories:["node_modules"] },
   postcss: [require('autoprefixer')]
