@@ -9,7 +9,7 @@
     "clean": "rimraf ./public/dist",
     "deploy": "npm run build && NODE_ENV=production node app.js",
     "start": "nodemon --watch config --watch controllers --watch models app.js",
-    "build:webpack": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
+    "build:webpack": "./node_modules/.bin/cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
     "build": "npm run clean && npm run build:webpack",
     "test": "mocha --reporter spec --timeout 5000"
   },
