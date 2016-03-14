@@ -1,6 +1,8 @@
 // require("bootstrap-webpack!./style/css/themes/default/_variables.less");
-require("bootstrap-webpack");
-require('./style/css/main.scss');
+// require("font-awesome-webpack");
+// require("bootstrap-webpack");
+
+// require('./style/css/main.scss');
 
 import React from 'react'
 import { render } from 'react-dom'
