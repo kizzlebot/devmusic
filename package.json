@@ -69,9 +69,6 @@
     "twilio": "^3.3.0-edge",
     "twit": "^2.2.2",
     "validator": "^5.1.0",
-    "yui": "^3.18.1"
-  },
-  "devDependencies": {
     "autoprefixer": "^6.3.3",
     "babel-core": "^6.6.5",
     "babel-eslint": "^5.0.0-beta4",
@@ -115,7 +112,10 @@
     "webpack": "^1.12.9",
     "webpack-dev-middleware": "^1.4.0",
     "webpack-dev-server": "^1.12.1",
-    "webpack-hot-middleware": "^2.9.1"
+    "webpack-hot-middleware": "^2.9.1",
+    "yui": "^3.18.1"
+  },
+  "devDependencies": {
   },
   "license": "MIT"
 }
