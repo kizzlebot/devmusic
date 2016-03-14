@@ -24,6 +24,7 @@ module.exports = {
     publicPath: '/public/'
   },
   plugins: [
+    new webpack.HotModuleReplacementPlugin(),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.DefinePlugin({
       'process.env': {
