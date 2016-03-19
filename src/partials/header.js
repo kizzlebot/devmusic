@@ -18,12 +18,13 @@ var Header = React.createClass({
           <div className="collapse navbar-collapse">
             <ul className="nav navbar-nav">
               <li><Link to="/">Home</Link></li>
-              <li><Link to="api">API Examples</Link></li>
-              <li><Link to="contact">Contact</Link></li>
+              <li><Link to="/api">API Examples</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
             </ul>
             <ul className="nav navbar-nav navbar-right">
-              <li><Link to="login">Login</Link></li>
-              <li><Link to="signup">Create Account</Link></li>
+              <li><Link to="/login">Login</Link></li>
+              <li><Link to="/signup">Create Account</Link></li>
+              <li><Link to="/github">Github</Link></li>
             </ul>
           </div>
         </div>

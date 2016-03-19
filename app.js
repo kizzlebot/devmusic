@@ -248,6 +248,15 @@ app.get('/auth/pinterest/callback', passport.authorize('pinterest', { failureRed
   res.redirect('/api/pinterest');
 });
 
+
+
+
+app.use('*', function(req, res, next){
+  res.render('home');
+})
+
+
+
 /**
  * Error Handler.
  */

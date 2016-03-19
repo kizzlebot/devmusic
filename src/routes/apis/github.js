@@ -1,47 +1,4 @@
-// require("bootstrap-webpack!./style/css/themes/default/_variables.less");
-require("font-awesome-webpack");
-require("bootstrap-webpack");
-
-require('./style/css/main.scss');
-
-import React from 'react'
-import { render } from 'react-dom'
-import { browserHistory, IndexRoute, Router, Route, Link } from 'react-router'
-
-
-
-import Header from './partials/header';
-import Footer from './partials/footer';
-
-
-
-import Home from './routes/home';
-// import GithubAPI from './routes/apis/github';
-import Contact from './routes/contact';
-import APIs from './routes/apis';
-import Login from './routes/login';
-import SignUp from './routes/signup';
-
-
-
-
-
-
-var App = React.createClass({
-  render: function(){
-    return (
-      <div>
-        <Header ref={'header'} />
-        <div className={'container'}>
-         {React.cloneElement(this.props.children, {
-           key: this.props.location.pathname
-         })}
-        </div>
-        <Footer/>
-      </div>
-    );
-  }
-})
+import React from 'react';
 
 
 
@@ -80,21 +37,4 @@ var GithubAPI = React.createClass({
 
 
 
-
-
-
-
-
-render((
-  <Router history={browserHistory}>
-    <Route path="/" component={App}>
-      <Route path="/api(/:apiName)" component={APIs}>
-      </Route>
-        <Route path='/github' component={GithubAPI}/>
-      <Route path="/contact" component={Contact} />
-      <Route path="/login" component={Login} />
-      <Route path="/signup" component={SignUp} />
-      <IndexRoute component={Home}/>
-    </Route>
-  </Router>
-), document.getElementById('root'))
+export default GithubAPI;

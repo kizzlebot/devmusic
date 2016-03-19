@@ -171,10 +171,10 @@ exports.getGithub = function(req, res, next) {
     if (err) {
       return next(err);
     }
-    res.render('api/github', {
+    res.render('home', {
       title: 'GitHub API',
       repo: repo
-    });
+    })
   });
 
 };
@@ -360,7 +360,7 @@ exports.getSteam = function(req, res, next) {
 
   var steamId = '76561197982488301';
   var params = { l: 'english', steamid: steamId, key: process.env.STEAM_KEY };
-  
+
   async.parallel({
     playerAchievements: function(done) {
       params.appid = '49520';

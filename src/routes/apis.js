@@ -1,13 +1,13 @@
 import React from 'react'
-
+import {Link} from 'react-router';
 
 
 
 var APIs= React.createClass({
-  getInitialState:function(){
+  getInitialState(){
     return {};
   },
-  _getAPIs:function(){
+  _getAPIs(){
     var Apis = {
       'GitHub':{
         style:{backgroundColor: '#000'},
@@ -98,23 +98,31 @@ var APIs= React.createClass({
     return Object.keys(Apis).map((e, i) => {
       var api = Apis[e];
       return (
-        <div key={e} className="col-sm-4"><a href={`/api/${e.toLowerCase().replace(/\./g,' ').replace(' ', '')}`} style={{color: '#fff'}}>
-          <div style={api.style} className="panel panel-default">
-          <div className="panel-body"><img src={api.src} height={40} /> {e}</div>
-        </div></a></div>
+        <div key={e} className="col-sm-4">
+          <Link to={`/api/${e.toLowerCase().replace(/\./g,' ').replace(' ', '')}`} >
+            <div style={api.style} className="panel panel-default">
+              <div className="panel-body"><img src={api.src} height={40} /> {e}</div>
+            </div>
+          </Link>
+        </div>
       );
     })
   },
-  render: function() {
-    return (
-      <div>
-        <h2>API Examples</h2>
-        <hr />
-        <div className="row">
-          {this._getAPIs()};
+  render() {
+    var {apiName} = this.props.params;
+    if (!apiName){
+      return (
+        <div>
+          <h2>API Examples</h2>
+          <hr />
+          <div className="row">
+            {this._getAPIs()};
+          </div>
+                  <div>{this.props.children}</div>
         </div>
-      </div>
-    );
+
+      );
+    }
   }
 });
 

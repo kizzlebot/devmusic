@@ -7,10 +7,12 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   // or devtool: 'eval' to debug issues with compiled output:
-  devtool: 'cheap-module-eval-source-map',
+  // devtool: 'cheap-module-eval-source-map',
+  devtool: 'source-map',
   entry: [
     'font-awesome-webpack',
     "bootstrap-webpack",
+
     // necessary for hot reloading with IE:
     'eventsource-polyfill',
     // listen to code updates emitted by hot middleware:
@@ -34,8 +36,8 @@ module.exports = {
       { test: /\.js$/,                                          loaders: ['react-hot', 'babel'], include: path.join(__dirname, 'src') },
       { test: /\.json?$/,        exclude: /node_modules/,       loader: 'json'},
       { test: /\.jade?$/,        exclude: /node_modules/,       loader: 'jade'},
-      { test: /\.woff2?/,                                       loader: 'url?limit=10000&mimetype=application/font-woff' },
-      { test: /\.woff?/,                                        loader: 'url?limit=10000&mimetype=application/font-woff' },
+      { test: /\.woff(\?\S*)?$/,                               loader: 'url?limit=10000&mimetype=application/font-woff' },
+      { test: /\.woff2(\?\S*)?$/,                               loader: 'url?limit=10000&mimetype=application/font-woff' },
       { test: /\.(ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,           loader: 'file-loader' },
       { test: /\.less$/,                                        loader: "style!css!less"},
       { test: /\.scss$/,                                        loaders: ['style', 'css', 'sass'] },
