@@ -599,10 +599,10 @@ exports.getLinkedin = function(req, res, next) {
   var token = _.find(req.user.tokens, { kind: 'linkedin' });
   var linkedin = Linkedin.init(token.accessToken);
   linkedin.people.me(function(err, $in) {
-    if (err) {
-      return next(err);
-    }
-    res.render('api/linkedin', {
+    if (err) return next(err);
+
+
+    res.render('home', {
       title: 'LinkedIn API',
       profile: $in
     });

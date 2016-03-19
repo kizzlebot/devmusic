@@ -108,9 +108,10 @@ var APIs= React.createClass({
       );
     })
   },
+
+
   render() {
-    var {apiName} = this.props.params;
-    if (!apiName){
+    if (!this.props.children)  {
       return (
         <div>
           <h2>API Examples</h2>
@@ -118,9 +119,14 @@ var APIs= React.createClass({
           <div className="row">
             {this._getAPIs()};
           </div>
-                  <div>{this.props.children}</div>
         </div>
-
+      );
+    }
+    else{
+      return (
+        <div>
+          {this.props.children}
+        </div>
       );
     }
   }

@@ -3,7 +3,7 @@ import {Link} from 'react-router';
 
 
 var Header = React.createClass({
-  render: function() {
+  render() {
     return (
       <div className="navbar navbar-default">
         <div className="container">
@@ -32,6 +32,7 @@ var Header = React.createClass({
     );
   }
 });
+
 
 
 export default Header;
