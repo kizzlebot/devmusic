@@ -1,5 +1,5 @@
 import React from 'react'
-
+var $ = require('jquery');
 
 
 var Login = React.createClass({
@@ -10,7 +10,7 @@ var Login = React.createClass({
           <h3>Sign in</h3>
         </div>
         <form method="POST" className="form-horizontal">
-          <input type="hidden" name="_csrf" />
+          <input type="hidden" name="_csrf" value={$('#csrf').attr('value')}/>
           <div className="form-group">
             <label htmlFor="email" className="col-sm-3 control-label">Email</label>
             <div className="col-sm-7">
