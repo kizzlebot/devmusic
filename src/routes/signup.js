@@ -2,14 +2,22 @@ import React from 'react'
 
 
 var SignUp = React.createClass({
-  render: function() {
+  onSubmit(evt){
+    evt.preventDefault();
+    var {email, password, confirmPassword} = this.refs.form;
+    var data = {email:email, password:password, confirmPassword:confirmPassword};
+    $.post('/signup', data, function(xData, status){
+      console.log(xData);
+    })
+  },
+  render() {
     return (
       <div>
         <div className="page-header">
           <h3>Sign up</h3>
         </div>
-        <form id="signup-form" method="POST" className="form-horizontal">
-          <input type="hidden" name="_csrf" />
+        <form ref='form' id="signup-form" onSubmit={this.onSubmit} className="form-horizontal">
+          <input type="hidden" name="_csrf" value={$('#csrf').attr('value')}/>
           <div className="form-group">
             <label htmlFor="email" className="col-sm-3 control-label">Email</label>
             <div className="col-sm-7">
