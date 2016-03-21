@@ -1,15 +1,33 @@
 import React from 'react'
 var $ = require('jquery');
-
+import {submitLogin, userStore} from '../redux/userStore';
 
 var Login = React.createClass({
-  render: function() {
+  contextTypes: {
+    router: React.PropTypes.object.isRequired
+  },
+  getInitialState(){
+    return userStore.getState();
+  },
+  componentDidMount(){
+    userStore.subscribe((data) => {
+      var state = {...userStore.getState()};
+      this.setState(state, () => {
+        if (state.logged_in) this.context.router.replace('/');
+      })
+    });
+  },
+  onSubmit(evt){
+    evt.preventDefault();
+    submitLogin(this.refs.form);
+  },
+  render() {
     return (
       <div>
         <div className="page-header">
           <h3>Sign in</h3>
         </div>
-        <form method="POST" className="form-horizontal">
+        <form ref={'form'} onSubmit={this.onSubmit} className="form-horizontal">
           <input type="hidden" name="_csrf" value={$('#csrf').attr('value')}/>
           <div className="form-group">
             <label htmlFor="email" className="col-sm-3 control-label">Email</label>

@@ -5,28 +5,28 @@ import {Link} from 'react-router';
 var Home = React.createClass({
   generateLorem: function(){
     var Apis = {
-      'GitHub':{
-        style:{backgroundColor: '#000'},
-        src:"http://i.imgur.com/2AaBlpf.png"
-      },
+      // 'GitHub':{
+      //   style:{backgroundColor: '#000'},
+      //   src:"http://i.imgur.com/2AaBlpf.png"
+      // },
 
-      'Facebook':{
-        style:{backgroundColor: '#3b5998'},
-        src:"http://i.imgur.com/jiztYCH.png"
-      },
-      'Foursquare':{
-        style:{backgroundColor: '#1cafec'},
-        src:"http://i.imgur.com/PixH9li.png"
-      },
+      // 'Facebook':{
+      //   style:{backgroundColor: '#3b5998'},
+      //   src:"http://i.imgur.com/jiztYCH.png"
+      // },
+      // 'Foursquare':{
+      //   style:{backgroundColor: '#1cafec'},
+      //   src:"http://i.imgur.com/PixH9li.png"
+      // },
 
-      'Last.fm':{
-        style:{backgroundColor: '#d21309'},
-        src:"http://i.imgur.com/KfZY876.png"
-      },
-      'Web Scraping':{
-        style:{backgroundColor: '#fEF'},
-        src:"http://i.imgur.com/RGCVvyR.png"
-      }
+      // 'Last.fm':{
+      //   style:{backgroundColor: '#d21309'},
+      //   src:"http://i.imgur.com/KfZY876.png"
+      // },
+      // 'Web Scraping':{
+      //   style:{backgroundColor: '#fEF'},
+      //   src:"http://i.imgur.com/RGCVvyR.png"
+      // }
     };
 
 

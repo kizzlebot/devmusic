@@ -1,9 +1,12 @@
 import { createStore } from 'redux';
+var $ = require('jquery');
+
+
+
 const LOG_IN = 'LOG_IN';
 const LOG_OUT = 'LOG_OUT';
 const SIGN_UP = 'SIGN_UP';
 const GET_PROFILE = 'GET_PROFILE';
-
 
 
 
@@ -22,12 +25,12 @@ const GET_PROFILE = 'GET_PROFILE';
  * project.
  */
 
-function auth(state = 0, action) {
+function auth(state = {}, action) {
   switch (action.type) {
   case LOG_IN:
-    return state + 1
+    return {...state, logged_in:true}
   case LOG_OUT:
-    return state - 1
+    return {...state, logged_in:false}
   case SIGN_UP:
   	return state
   case GET_PROFILE:
@@ -37,10 +40,15 @@ function auth(state = 0, action) {
   }
 }
 
+
+
+
+
+
 // Create a Redux store holding the state of your app.
 // Its API is { subscribe, dispatch, getState }.
 
-let userStore = createStore(auth);
+export const userStore = createStore(auth);
 
 
 
@@ -53,11 +61,54 @@ function log_in(){
 		type: LOG_IN
 	}
 }
+function signup(){
+	return {
+		type: SIGN_UP
+	}
+}
 
 
 
 
-export {log_in, userStore};
+
+
+
+
+export function submitLogin(form){
+	return $.ajax({
+		url:'/login',
+		data:{
+			email:form.email.value,
+			password:form.password.value,
+			_csrf:form._csrf.value
+		},
+		method:'POST'
+	})
+	.then((xData, status, xhr) => {
+		console.log(xhr.getAllResponseHeaders());
+		userStore.dispatch(log_in());
+		return Promise.resolve(xData, status, xhr);
+	});
+}
+export function submitSignup(form){
+	return $.ajax({
+		url:'/signup',
+		data:{
+			email:form.email.value,
+			password:form.password.value,
+			confirmPassword:form.confirmPassword.value,
+			_csrf:form._csrf.value
+		},
+		method:'POST'
+	})
+	.then((xData, status, xhr) => {
+		console.log(xhr.getAllResponseHeaders());
+		userStore.dispatch(log_in());
+		return Promise.resolve(xData, status, xhr);
+	});
+}
+
+
 
 
 // You can subscribe to the updates manually, or use bindings to your view layer.

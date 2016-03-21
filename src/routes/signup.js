@@ -1,14 +1,24 @@
 import React from 'react'
-
+import {submitSignup, userStore} from '../redux/userStore';
 
 var SignUp = React.createClass({
+  contextTypes: {
+    router: React.PropTypes.object.isRequired
+  },
+  getInitialState(){
+    return userStore.getState();
+  },
+  componentDidMount(){
+    userStore.subscribe((data) => {
+      var state = {...userStore.getState()};
+      this.setState(state, () => {
+        if (state.logged_in) this.context.router.replace('/');
+      })
+    });
+  },
   onSubmit(evt){
     evt.preventDefault();
-    var {email, password, confirmPassword} = this.refs.form;
-    var data = {email:email, password:password, confirmPassword:confirmPassword};
-    $.post('/signup', data, function(xData, status){
-      console.log(xData);
-    })
+    submitSignup(this.refs.form)
   },
   render() {
     return (

@@ -49,7 +49,7 @@ exports.postLogin = function(req, res, next) {
         return next(err);
       }
       // req.flash('success', { msg: 'Success! You are logged in.' });
-      res.json({returnTo:req.session.returnTo});
+      res.sendStatus(200);
     });
   })(req, res, next);
 };

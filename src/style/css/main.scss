@@ -41,12 +41,23 @@ textarea {
 // Navbar
 // -------------------------
 
-.navbar-nav img {
-  width: 30px;
-  height: 30px;
-  margin: -15px 15px -15px;
+.navbar-nav{
+  li > a.active{
+    color:#fff;
+    background-color:transparent;
+  }
+  img {
+    width: 30px;
+    height: 30px;
+    margin: -15px 15px -15px;
+  }
 }
 
+
+
+.navbar.navbar-inverse{
+  border-radius: 0px;
+}
 // Alerts
 // -------------------------
 
