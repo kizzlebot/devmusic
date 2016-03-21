@@ -32,8 +32,8 @@ exports.postLogin = function(req, res, next) {
   var errors = req.validationErrors();
 
   if (errors) {
-    req.flash('errors', errors);
-    return res.redirect('/login');
+    // req.flash('errors', errors);
+    return res.json({msg:errors});
   }
 
   passport.authenticate('local', function(err, user, info) {
@@ -41,15 +41,15 @@ exports.postLogin = function(req, res, next) {
       return next(err);
     }
     if (!user) {
-      req.flash('errors', { msg: info.message });
-      return res.redirect('/login');
+      // req.flash('errors', { msg: info.message });
+      return res.json({msg:info.message});
     }
     req.logIn(user, function(err) {
       if (err) {
         return next(err);
       }
-      req.flash('success', { msg: 'Success! You are logged in.' });
-      res.redirect(req.session.returnTo || '/');
+      // req.flash('success', { msg: 'Success! You are logged in.' });
+      res.json({returnTo:req.session.returnTo});
     });
   })(req, res, next);
 };
@@ -61,22 +61,6 @@ exports.postLogin = function(req, res, next) {
 exports.logout = function(req, res) {
   req.logout();
   res.redirect('/');
-};
-
-/**
- * GET /signup
- * Signup page.
- */
-exports.getSignup = function(req, res) {
-  if (req.user) {
-    return res.redirect('/');
-  }
-  // res.render('account/signup', {
-  //   title: 'Create Account'
-  // });
-  res.render('home', {
-    title: 'Create Account'
-  });
 };
 
 /**
