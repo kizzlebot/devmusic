@@ -6,7 +6,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 
 module.exports = {
-  devtool: 'source-map',
+  devtool: 'inline-source-map',
   entry: [
     'font-awesome-webpack',
     "bootstrap-webpack",
@@ -14,7 +14,7 @@ module.exports = {
     // necessary for hot reloading with IE:
     'eventsource-polyfill',
     // listen to code updates emitted by hot middleware:
-    'webpack-hot-middleware/client',
+    // 'webpack-hot-middleware/client',
     // your code:
     './src/index'
   ],
@@ -24,7 +24,7 @@ module.exports = {
     publicPath: '/dist/'
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
+    // new webpack.HotModuleReplacementPlugin(),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.DefinePlugin({
       'process.env': {

@@ -8,7 +8,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
   // or devtool: 'eval' to debug issues with compiled output:
   // devtool: 'cheap-module-eval-source-map',
-  devtool: 'source-map',
+  devtool: 'inline-source-map',
   entry: [
     'font-awesome-webpack',
     "bootstrap-webpack",
