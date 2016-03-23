@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"LOG",
+				"LOG_IN"
+			],
+			[
+				"LOG_",
+				"LOG_OUT"
+			],
+			[
 				"Gi",
 				"GithubAPI"
 			],
@@ -23,62 +31,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "package.json",
-			"settings":
-			{
-				"buffer_size": 3712,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "config/passport.js",
-			"settings":
-			{
-				"buffer_size": 19714,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/index.js",
-			"settings":
-			{
-				"buffer_size": 1500,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/routes/apis/linkedin.js",
-			"settings":
-			{
-				"buffer_size": 1624,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app.js",
-			"settings":
-			{
-				"buffer_size": 10248,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "controllers/user.js",
-			"settings":
-			{
-				"buffer_size": 9971,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/routes/apis.js",
-			"settings":
-			{
-				"buffer_size": 3448,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -87,17 +39,25 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 375.0,
-		"last_filter": "",
+		"height": 269.0,
+		"last_filter": "eslint",
 		"selected_items":
 		[
 			[
-				"less",
-				"Set Syntax: LESS"
+				"eslint",
+				"Preferences: SublimeLinter Settings – User"
 			],
 			[
 				"install",
 				"Package Control: Install Package"
+			],
+			[
+				"p",
+				"Project: Edit"
+			],
+			[
+				"less",
+				"Set Syntax: LESS"
 			],
 			[
 				"scss",
@@ -126,10 +86,6 @@
 			[
 				"inst",
 				"Package Control: Install Package"
-			],
-			[
-				"eslint",
-				"Preferences: SublimeLinter Settings – User"
 			],
 			[
 				"jsfm",
@@ -169,33 +125,55 @@
 	"expanded_folders":
 	[
 		"/Users/kizzlebot/Documents/devmusic",
-		"/Users/kizzlebot/Documents/devmusic/src/routes"
+		"/Users/kizzlebot/Documents/devmusic/config",
+		"/Users/kizzlebot/Documents/devmusic/controllers",
+		"/Users/kizzlebot/Documents/devmusic/models"
 	],
 	"file_history":
 	[
+		"/Users/kizzlebot/Documents/devmusic/webpack.config.dev.js",
+		"/Users/kizzlebot/Documents/devmusic/controllers/home.js",
+		"/Users/kizzlebot/Documents/devmusic/src/routes.js",
+		"/Users/kizzlebot/Documents/devmusic/src/index.js",
+		"/Users/kizzlebot/Documents/devmusic/controllers/react_route.js",
+		"/Users/kizzlebot/Documents/devmusic/webpack.config.prod.js",
+		"/Users/kizzlebot/Documents/devmusic/package.json",
+		"/Users/kizzlebot/Documents/devmusic/app.js",
+		"/Users/kizzlebot/Documents/devmusic/controllers/user.js",
+		"/Users/kizzlebot/Documents/devmusic/config/passport.js",
+		"/Users/kizzlebot/Documents/devmusic/models/User.js",
+		"/Users/kizzlebot/Documents/devmusic/npm-debug.log",
+		"/Users/kizzlebot/Documents/devmusic/src/redux/userStore.js",
+		"/Users/kizzlebot/Documents/devmusic/src/style/css/main.scss",
+		"/Users/kizzlebot/Documents/devmusic/src/style/css/themes/flatly/_variables.scss",
+		"/Users/kizzlebot/Documents/devmusic/src/CheckboxWithLabel.js",
+		"/Users/kizzlebot/Documents/devmusic/src/style/css/themes/default/_default.scss",
+		"/Users/kizzlebot/Documents/devmusic/src/__tests__/userStore-test.js",
+		"/Users/kizzlebot/Documents/devmusic/src/partials/header.js",
+		"/Users/kizzlebot/Documents/devmusic/src/routes/home.js",
+		"/Users/kizzlebot/Documents/devmusic/src/routes/login.js",
+		"/Users/kizzlebot/Documents/devmusic/src/routes/signup.js",
+		"/Users/kizzlebot/Documents/devmusic/src/redux/actionTypes.js",
+		"/Users/kizzlebot/Documents/devmusic/src/routes/apis.js",
+		"/Users/kizzlebot/Documents/kizzlebot.github.io/resume.json",
+		"/Users/kizzlebot/Documents/devmusic/views/layout.jade",
+		"/Users/kizzlebot/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+		"/Users/kizzlebot/Documents/devmusic/src/style/css/lib/bootstrap/_input-groups.scss",
+		"/Users/kizzlebot/Documents/devmusic/devmusic.sublime-project",
+		"/Users/kizzlebot/Documents/devmusic/src/routes/apis/linkedin.js",
 		"/Users/kizzlebot/Documents/devmusic/controllers/api.js",
 		"/Users/kizzlebot/Documents/devmusic/src/routes/apis/github.js",
 		"/Users/kizzlebot/Documents/devmusic/views/api/aviary.jade",
 		"/Users/kizzlebot/Documents/devmusic/views/api/linkedin.jade",
-		"/Users/kizzlebot/Documents/devmusic/src/routes/apis/linkedin.js",
-		"/Users/kizzlebot/Documents/devmusic/src/routes/apis.js",
-		"/Users/kizzlebot/Documents/devmusic/src/partials/header.js",
-		"/Users/kizzlebot/Documents/devmusic/webpack.config.prod.js",
-		"/Users/kizzlebot/Documents/devmusic/webpack.config.dev.js",
 		"/Users/kizzlebot/Documents/devmusic/Procfile",
-		"/Users/kizzlebot/Documents/devmusic/src/index.js",
-		"/Users/kizzlebot/Documents/devmusic/package.json",
-		"/Users/kizzlebot/Documents/devmusic/app.js",
 		"/Users/kizzlebot/Documents/devmusic/views/api/github.jade",
 		"/Users/kizzlebot/Documents/devmusic/views/api/index.jade",
-		"/Users/kizzlebot/Documents/devmusic/views/layout.jade",
 		"/Users/kizzlebot/Documents/devmusic/src/components/signup.js",
 		"/Users/kizzlebot/Documents/devmusic/views/account/signup.jade",
 		"/Users/kizzlebot/Documents/devmusic/src/components/apis.js",
 		"/Users/kizzlebot/Documents/devmusic/src/components/login.js",
 		"/Users/kizzlebot/Documents/devmusic/views/account/login.jade",
 		"/Users/kizzlebot/Documents/devmusic/src/style/css/lib/bootstrap/_variables.scss",
-		"/Users/kizzlebot/Documents/devmusic/src/style/css/main.scss",
 		"/Users/kizzlebot/Documents/devmusic/src/style/css/themes/default/_variables.less",
 		"/Users/kizzlebot/Documents/devmusic/public/css/lib/bootstrap/_variables.scss",
 		"/Users/kizzlebot/Documents/devmusic/src/style/css/themes/default/_variables.scss",
@@ -206,7 +184,6 @@
 		"/Users/kizzlebot/Documents/devmusic/src/components/Home.js",
 		"/Users/kizzlebot/Documents/devmusic/views/contact.jade",
 		"/Users/kizzlebot/Documents/devmusic/views/home.jade",
-		"/Users/kizzlebot/Documents/devmusic/controllers/home.js",
 		"/Users/kizzlebot/Documents/devmusic/src/footer.js",
 		"/Users/kizzlebot/Documents/devmusic/src/header.js",
 		"/Users/kizzlebot/Documents/devmusic/views/partials/footer.jade",
@@ -214,18 +191,13 @@
 		"/Users/kizzlebot/Documents/devmusic/.babelrc",
 		"/Users/kizzlebot/Documents/devmusic/public/js/header.js",
 		"/Users/kizzlebot/Documents/devmusic/public/js/index.js",
-		"/Users/kizzlebot/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
 		"/Users/kizzlebot/Library/Application Support/Sublime Text 3/Packages/SublimeLinter/SublimeLinter.sublime-settings",
 		"/Users/kizzlebot/Documents/devmusic/public/js/login.js",
 		"/Users/kizzlebot/Documents/devmusic/views/account/profile.jade",
 		"/Users/kizzlebot/Documents/devmusic/views/partials/header.jade",
-		"/Users/kizzlebot/Documents/devmusic/controllers/user.js",
-		"/Users/kizzlebot/Documents/devmusic/config/passport.js",
-		"/Users/kizzlebot/Documents/devmusic/models/User.js",
 		"/Users/kizzlebot/Library/Application Support/Sublime Text 3/Packages/BufferScroll/BufferScroll.sublime-settings",
 		"/Users/kizzlebot/Library/Application Support/Sublime Text 3/Packages/User/BufferScroll.sublime-settings",
 		"/Users/kizzlebot/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
-		"/Users/kizzlebot/Documents/devmusic/devmusic.sublime-project",
 		"/Users/kizzlebot/Documents/devmusic/.env.example",
 		"/Users/kizzlebot/Downloads/demo/jquery.tzineClock/jquery.tzineClock.css",
 		"/Users/kizzlebot/Documents/awesomeproj/index.ios.js",
@@ -257,6 +229,17 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"getOa",
+			"lusca",
+			"session",
+			"font",
+			"icon-",
+			"fonts",
+			"../",
+			"passportConfig",
+			"eslint",
+			"postLogin",
+			"object",
 			"getGithub",
 			"github",
 			"components/home",
@@ -342,240 +325,8 @@
 	"groups":
 	[
 		{
-			"selected": 2,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "package.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3712,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								692,
-								692
-							]
-						],
-						"settings":
-						{
-							"bs_sintax": "json",
-							"buffer_scroll_name": "bbc991bc",
-							"spell_check": false,
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 555.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "config/passport.js",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 19714,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								757,
-								757
-							]
-						],
-						"settings":
-						{
-							"bs_sintax": "javascript (babel)",
-							"buffer_scroll_name": "56b75e88",
-							"spell_check": false,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/index.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1500,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1002,
-								1002
-							]
-						],
-						"settings":
-						{
-							"bs_sintax": "javascript (babel)",
-							"buffer_scroll_name": "f45690f8",
-							"spell_check": false,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 5.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "src/routes/apis/linkedin.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1624,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1599,
-								1599
-							]
-						],
-						"settings":
-						{
-							"bs_sintax": "javascript (babel)",
-							"buffer_scroll_name": "a0faec8a",
-							"spell_check": false,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 10248,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3420,
-								3420
-							]
-						],
-						"settings":
-						{
-							"bs_sintax": "javascript (babel)",
-							"buffer_scroll_name": "1aace5d6",
-							"spell_check": false,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1883.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "controllers/user.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 9971,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1416,
-								1416
-							]
-						],
-						"settings":
-						{
-							"bs_sintax": "javascript (babel)",
-							"buffer_scroll_name": "0a437925",
-							"spell_check": false,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 74.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "src/routes/apis.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3448,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3385,
-								3385
-							]
-						],
-						"settings":
-						{
-							"bs_sintax": "javascript (babel)",
-							"buffer_scroll_name": "b0626c89",
-							"spell_check": false,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 695.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -628,12 +379,60 @@
 		"selected_items":
 		[
 			[
-				"packa",
-				"package.json"
+				"home",
+				"controllers/home.js"
+			],
+			[
+				"index",
+				"src/index.js"
+			],
+			[
+				"routes",
+				"src/routes.js"
+			],
+			[
+				"prod",
+				"webpack.config.prod.js"
+			],
+			[
+				"user",
+				"controllers/user.js"
+			],
+			[
+				"app",
+				"app.js"
+			],
+			[
+				"style.s",
+				"src/style/css/main.scss"
+			],
+			[
+				"signup",
+				"src/routes/signup.js"
+			],
+			[
+				"login",
+				"src/routes/login.js"
+			],
+			[
+				"uses",
+				"src/redux/userStore.js"
+			],
+			[
+				"web",
+				"webpack.config.prod.js"
 			],
 			[
 				"webpack",
-				"webpack.config.prod.js"
+				"webpack.config.dev.js"
+			],
+			[
+				"head",
+				"src/partials/header.js"
+			],
+			[
+				"packa",
+				"package.json"
 			],
 			[
 				"app.js",
@@ -648,16 +447,8 @@
 				"views/api/index.jade"
 			],
 			[
-				"head",
-				"src/partials/header.js"
-			],
-			[
 				"dev",
 				"webpack.config.dev.js"
-			],
-			[
-				"index",
-				"src/index.js"
 			],
 			[
 				"proc",
@@ -704,10 +495,6 @@
 				"views/home.jade"
 			],
 			[
-				"home",
-				"controllers/home.js"
-			],
-			[
 				"index.js",
 				"src/index.js"
 			],
@@ -718,10 +505,6 @@
 			[
 				"src/",
 				"src/index.js"
-			],
-			[
-				"app",
-				"app.js"
 			],
 			[
 				"ine",
