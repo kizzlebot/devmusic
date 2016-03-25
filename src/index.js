@@ -29,7 +29,7 @@ import SignUp from './routes/signup';
 
 
 var App = React.createClass({
-  render: function(){
+  render(){
     return (
       <div>
         <Header ref={'header'} />
@@ -42,7 +42,9 @@ var App = React.createClass({
       </div>
     );
   }
-})
+});
+
+
 
 
 

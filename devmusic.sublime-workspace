@@ -125,20 +125,18 @@
 	"expanded_folders":
 	[
 		"/Users/kizzlebot/Documents/devmusic",
-		"/Users/kizzlebot/Documents/devmusic/config",
-		"/Users/kizzlebot/Documents/devmusic/controllers",
-		"/Users/kizzlebot/Documents/devmusic/models"
+		"/Users/kizzlebot/Documents/devmusic/config"
 	],
 	"file_history":
 	[
+		"/Users/kizzlebot/Documents/devmusic/package.json",
+		"/Users/kizzlebot/Documents/devmusic/app.js",
 		"/Users/kizzlebot/Documents/devmusic/webpack.config.dev.js",
 		"/Users/kizzlebot/Documents/devmusic/controllers/home.js",
 		"/Users/kizzlebot/Documents/devmusic/src/routes.js",
 		"/Users/kizzlebot/Documents/devmusic/src/index.js",
 		"/Users/kizzlebot/Documents/devmusic/controllers/react_route.js",
 		"/Users/kizzlebot/Documents/devmusic/webpack.config.prod.js",
-		"/Users/kizzlebot/Documents/devmusic/package.json",
-		"/Users/kizzlebot/Documents/devmusic/app.js",
 		"/Users/kizzlebot/Documents/devmusic/controllers/user.js",
 		"/Users/kizzlebot/Documents/devmusic/config/passport.js",
 		"/Users/kizzlebot/Documents/devmusic/models/User.js",
@@ -229,6 +227,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"-loader",
+			"{}",
+			"function(req, res) {",
+			"}), function(req, res)",
 			"getOa",
 			"lusca",
 			"session",
@@ -379,6 +381,10 @@
 		"selected_items":
 		[
 			[
+				"packa",
+				"package.json"
+			],
+			[
 				"home",
 				"controllers/home.js"
 			],
@@ -429,10 +435,6 @@
 			[
 				"head",
 				"src/partials/header.js"
-			],
-			[
-				"packa",
-				"package.json"
 			],
 			[
 				"app.js",
@@ -555,7 +557,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 283.0,
+	"side_bar_width": 194.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
