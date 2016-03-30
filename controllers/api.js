@@ -176,7 +176,6 @@ exports.getGithub = function(req, res, next) {
       repo: repo
     })
   });
-
 };
 
 /**

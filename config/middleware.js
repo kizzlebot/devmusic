@@ -1,3 +1,4 @@
+var pkg = require('../package.json');
 var cookieParser = require('cookie-parser');
 var compress = require('compression');
 var session = require('express-session');
@@ -15,20 +16,36 @@ var passport = require('passport');
 var expressValidator = require('express-validator');
 var sass = require('node-sass-middleware');
 var multer = require('multer');
+var express = require('express');
 
-var passportConfig = require('./config/passport');
+var passportConfig = require('./passport');
 
-module.exports = (app, cb) => {
+
+
+
+
+
+
+
+
+module.exports = (app, dir, cb) => {
   app.set('port', process.env.PORT || 3000);
-  app.set('views', path.join(__dirname, 'views'));
+  app.set('views', path.join(dir, 'views'));
   app.set('view engine', 'jade');
   app.use(compress());
   app.use(sass({
-    src: path.join(__dirname, 'public'),
-    dest: path.join(__dirname, 'public'),
+    src: path.join(dir, 'public'),
+    dest: path.join(dir, 'public'),
     sourceMap: true
   }));
-  app.use(logger('dev'));
+
+
+
+    app.use(logger('dev', {
+      skip: (req, res) => (process.env.NODE_ENV == 'test')
+    }));
+
+
   app.use(bodyParser.json());
   app.use(bodyParser.urlencoded({ extended: true }));
   app.use(expressValidator());
@@ -56,9 +73,13 @@ module.exports = (app, cb) => {
   });
   app.use((req, res, next) => {
     if (/api/i.test(req.path)) req.session.returnTo = req.path;
+    if(res.locals._csrf) res.cookie('csrf', res.locals._csrf);
+
     next();
   });
-  app.use(express.static(path.join(__dirname, 'public'), { maxAge: 31557600000 }));
+
+  app.use(express.static(path.join(dir, 'public'), { maxAge: 31557600000 }));
+
 
 
 }

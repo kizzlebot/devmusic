@@ -3,10 +3,7 @@ var $ = require('jquery');
 
 
 
-const LOG_IN = 'LOG_IN';
-const LOG_OUT = 'LOG_OUT';
-const SIGN_UP = 'SIGN_UP';
-const GET_PROFILE = 'GET_PROFILE';
+import {LOG_IN, LOG_OUT, SIGN_UP, GET_PROFILE} from './actionTypes';
 
 
 
@@ -48,7 +45,7 @@ function auth(state = {}, action) {
 // Create a Redux store holding the state of your app.
 // Its API is { subscribe, dispatch, getState }.
 
-export const userStore = createStore(auth);
+const userStore = createStore(auth);
 
 
 
@@ -66,6 +63,11 @@ function signup(){
 		type: SIGN_UP
 	}
 }
+function log_out(){
+	return {
+		type: LOG_OUT
+	}
+}
 
 
 
@@ -73,8 +75,7 @@ function signup(){
 
 
 
-
-export function submitLogin(form){
+function submitLogin(form){
 	return $.ajax({
 		url:'/login',
 		data:{
@@ -90,7 +91,7 @@ export function submitLogin(form){
 		return Promise.resolve(xData, status, xhr);
 	});
 }
-export function submitSignup(form){
+function submitSignup(form){
 	return $.ajax({
 		url:'/signup',
 		data:{
@@ -107,8 +108,15 @@ export function submitSignup(form){
 		return Promise.resolve(xData, status, xhr);
 	});
 }
+function submitLogout(){
+
+}
 
 
+
+
+
+export {submitLogin, submitSignup, userStore};
 
 
 // You can subscribe to the updates manually, or use bindings to your view layer.

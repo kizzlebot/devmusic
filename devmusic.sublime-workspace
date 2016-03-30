@@ -125,19 +125,23 @@
 	"expanded_folders":
 	[
 		"/Users/kizzlebot/Documents/devmusic",
-		"/Users/kizzlebot/Documents/devmusic/config"
+		"/Users/kizzlebot/Documents/devmusic/controllers",
+		"/Users/kizzlebot/Documents/devmusic/src"
 	],
 	"file_history":
 	[
-		"/Users/kizzlebot/Documents/devmusic/package.json",
-		"/Users/kizzlebot/Documents/devmusic/app.js",
-		"/Users/kizzlebot/Documents/devmusic/webpack.config.dev.js",
-		"/Users/kizzlebot/Documents/devmusic/controllers/home.js",
-		"/Users/kizzlebot/Documents/devmusic/src/routes.js",
 		"/Users/kizzlebot/Documents/devmusic/src/index.js",
+		"/Users/kizzlebot/Documents/devmusic/controllers/api.js",
+		"/Users/kizzlebot/Documents/devmusic/controllers/user.js",
+		"/Users/kizzlebot/Documents/devmusic/app.js",
+		"/Users/kizzlebot/Documents/devmusic/config/middleware.js",
+		"/Users/kizzlebot/Documents/devmusic/src/routes.js",
+		"/Users/kizzlebot/Documents/devmusic/package.json",
+		"/Users/kizzlebot/Documents/codeforFTL/builder.js",
+		"/Users/kizzlebot/Documents/devmusic/controllers/home.js",
+		"/Users/kizzlebot/Documents/devmusic/webpack.config.dev.js",
 		"/Users/kizzlebot/Documents/devmusic/controllers/react_route.js",
 		"/Users/kizzlebot/Documents/devmusic/webpack.config.prod.js",
-		"/Users/kizzlebot/Documents/devmusic/controllers/user.js",
 		"/Users/kizzlebot/Documents/devmusic/config/passport.js",
 		"/Users/kizzlebot/Documents/devmusic/models/User.js",
 		"/Users/kizzlebot/Documents/devmusic/npm-debug.log",
@@ -159,7 +163,6 @@
 		"/Users/kizzlebot/Documents/devmusic/src/style/css/lib/bootstrap/_input-groups.scss",
 		"/Users/kizzlebot/Documents/devmusic/devmusic.sublime-project",
 		"/Users/kizzlebot/Documents/devmusic/src/routes/apis/linkedin.js",
-		"/Users/kizzlebot/Documents/devmusic/controllers/api.js",
 		"/Users/kizzlebot/Documents/devmusic/src/routes/apis/github.js",
 		"/Users/kizzlebot/Documents/devmusic/views/api/aviary.jade",
 		"/Users/kizzlebot/Documents/devmusic/views/api/linkedin.jade",
@@ -227,6 +230,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"imgur",
+			"browser",
+			"import",
+			"pkg",
+			"__dirname",
+			"var ",
+			"cookiePars",
 			"-loader",
 			"{}",
 			"function(req, res) {",
@@ -381,6 +391,14 @@
 		"selected_items":
 		[
 			[
+				"user",
+				"controllers/user.js"
+			],
+			[
+				"routes",
+				"src/routes.js"
+			],
+			[
 				"packa",
 				"package.json"
 			],
@@ -393,16 +411,8 @@
 				"src/index.js"
 			],
 			[
-				"routes",
-				"src/routes.js"
-			],
-			[
 				"prod",
 				"webpack.config.prod.js"
-			],
-			[
-				"user",
-				"controllers/user.js"
 			],
 			[
 				"app",

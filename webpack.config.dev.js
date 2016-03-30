@@ -18,7 +18,7 @@ module.exports = {
     // listen to code updates emitted by hot middleware:
     'webpack-hot-middleware/client',
     // your code:
-    './src/index'
+    './src/client'
   ],
   output: {
     path: path.join(__dirname, 'dist'),
@@ -36,7 +36,7 @@ module.exports = {
       { test: /\.js$/,                                          loaders: ['react-hot', 'babel'], include: path.join(__dirname, 'src') },
       { test: /\.json?$/,        exclude: /node_modules/,       loader: 'json'},
       { test: /\.jade?$/,        exclude: /node_modules/,       loader: 'jade'},
-      { test: /\.woff(\?\S*)?$/,                               loader: 'url?limit=10000&mimetype=application/font-woff' },
+      { test: /\.woff(\?\S*)?$/,                                loader: 'url?limit=10000&mimetype=application/font-woff' },
       { test: /\.woff2(\?\S*)?$/,                               loader: 'url?limit=10000&mimetype=application/font-woff' },
       { test: /\.(ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,           loader: 'file-loader' },
       { test: /\.less$/,                                        loader: "style!css!less"},

@@ -16,7 +16,7 @@ module.exports = {
     // listen to code updates emitted by hot middleware:
     // 'webpack-hot-middleware/client',
     // your code:
-    './src/index'
+    './src/client'
   ],
   output: {
     path: path.join(__dirname, 'public', 'dist'),
@@ -56,5 +56,4 @@ module.exports = {
   },
   resolve:{ modulesDirectories:["node_modules"] },
   postcss: [require('autoprefixer')]
-
 };
